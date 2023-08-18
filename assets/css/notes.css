@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/*Predefinição das cores utilizadas*/
 :root{
     --addnote-color: #808080;
     --scrollbar-color: #4b4453;
@@ -34,6 +35,7 @@ body{
     cursor: pointer;
 }
 
+/*Personalização do icone de adicinar*/
 .icon-plus{
     padding: 0 14px;
     border: 1px solid;
@@ -46,6 +48,7 @@ body{
     display: contents;
 }
 
+/*Definição do bloco de notas, tamanho e estilo*/
 textarea{
     padding: 5px;
     padding-top: 14px;
@@ -73,6 +76,7 @@ textarea::-webkit-scrollbar-thumb{
     height: 150px;
 }
 
+/*Icone de remoção ou exclusão do item inserido*/
 .remove{
     position: absolute;
     right: 6px;
