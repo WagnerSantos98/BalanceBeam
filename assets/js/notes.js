@@ -8,12 +8,7 @@ let items_db = localStorage.getItem("items_db")
 
 //Array de armazenamento de cores para os blocos de notas
 const colors = [
-    "#845ec2",
-    "#008f7a",
-    "#008e9b",
-    "#ffc75f",
-    "#ff8066",
-    "#ba3caf"
+    "#fff7b0"
 ];
 
 //Variável de randomico selecionando as cores aleatoriamente
@@ -45,6 +40,7 @@ function addHTML(item) {
     div.innerHTML = `<div class="item" style="background-color: ${
       item?.color || randomColor()
     }">
+      <span class="current-date">${getCurrentDate()}</span>
       <span class="remove">X</span>
       <textarea>${item?.text || ""}</textarea>
     </div>`;
@@ -83,6 +79,16 @@ function addEvents() {
 function verifyNulls(){
     items_db = items_db.filter((item) => item);
     localStorage.setItem("items_db", JSON.stringify(items_db));
+}
+
+//Função que insere a data atual
+function getCurrentDate(){
+    const currentDate = new Date();
+  const day = currentDate.getDate();
+  const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+  const year = currentDate.getFullYear();
+  const formattedDate = `${day}/${month}/${year}`;
+  return formattedDate;
 }
 
 loadItems();

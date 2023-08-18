@@ -4,6 +4,10 @@
     --button-color: #2c73d2;
     --chevron-up-color: #00c9a7;
     --chevron-down-color: #d83121;
+    --incomes-color: #2ecc71;
+    --expenses-color: #c0392b;
+    --total-color: #2e75cc;
+
 }
 
 *{
@@ -26,6 +30,23 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+h1{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.incomes{
+    color: var(--incomes-color);
+}
+
+.expenses{
+    color: var(--expenses-color);
+}
+
+.total{
+    color: var(--total-color);
 }
 
 .resume{
@@ -74,6 +95,10 @@ input, select{
     padding: 5px;
 }
 
+select{
+    border-radius: 5px;
+}
+
 .divTable{
     display: flex;
     width: 100%;
@@ -94,6 +119,16 @@ th{
 
 i{
     font-size: 25px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
 }
 
 .bxs-chevron-up-circle{
