@@ -1,5 +1,5 @@
-const content = document.querySelector(".content");
-const btnNew = document.querySelector(".addNote-content");
+const content = document.querySelector(".content-notes");
+const btnNotes = document.querySelector(".addNote-content");
 
 //Armazenar informações no localStorage do navegador
 let items_db = localStorage.getItem("items_db")
@@ -27,7 +27,7 @@ const randomColor = () => colors[Math.floor(Math.random() * colors.length)];
 }
 
 //Botão de inserção
-btnNew.onclick = () => {
+btnNotes.onclick = () => {
     addHTML();
 
     addEvents();

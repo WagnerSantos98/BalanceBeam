@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 :root{
+    /*Style colors - menu principal*/
     --primary-color: #ccc;
     --button-color: #2c73d2;
     --chevron-up-color: #00c9a7;
@@ -8,6 +10,16 @@
     --expenses-color: #c0392b;
     --total-color: #2e75cc;
 
+    /*Style colors - financeiro*/
+    --vertical-menu: #2e75cc;
+    --background-menu: #f2f2f2;
+    --select-color: #fff;
+
+    /*Style colors - bloco de notas*/
+    --addnote-color: #808080;
+    --scrollbar-color: #4b4453;
+    --removeclose-color: #000;
+
 }
 
 *{
@@ -15,13 +27,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    outline: none;
 }
-
+  
 body{
-    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 main{
@@ -58,6 +70,7 @@ h1{
     flex-wrap: wrap;
 }
 
+
 .resume>div{
     display: flex;
     flex-direction: column;
@@ -79,6 +92,18 @@ h1{
 .divDesc, .divType, .divAmount{
     display: flex;
     flex-direction: column;
+}
+
+.card-item{
+    background-color: var(--select-color);
+}
+
+.label-text{
+    font-size: 16px;
+}
+
+.columnAction, .columnAmount, .columnType, .columnDesc{
+    font-size: 22px;
 }
 
 .newItem>button{
@@ -157,3 +182,224 @@ input[type=number]{
     width: 80px;
     text-align: center;
 }
+
+td{
+    font-size: 14px;
+}
+
+/*Style CSS - Financeiro*/ 
+::selection{
+    background: var(--vertical-menu);
+}
+  
+.container{
+    max-width: 950px;
+    width: 100%;
+    padding: 50px 40px;
+    margin: 0px 20px;
+    border-radius: 12px;
+    background: var(--background-menu);
+ }
+  
+.container .topic{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+  
+.content input[type=radio]{
+    display: none;
+}
+  
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.content .list{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+    margin-right: 50px;
+}
+  
+.content .list label{
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 25px;
+    transition: all 0.5s ease;
+    z-index: 10;
+}
+  
+#home:checked ~ .list label.home,
+#blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about{
+    color: var(--select-color);
+}
+  
+.content .slider{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    transition: all 0.5s ease;  
+    background: var(--vertical-menu);
+}
+ 
+#home:checked ~ .list .slider{
+    top: 0;
+}
+  
+#blog:checked ~ .list .slider{
+    top: 60px;
+}
+  
+#help:checked ~ .list .slider{
+    top: 120px;
+}
+  
+#code:checked ~ .list .slider{
+    top: 180px;
+}
+  
+#about:checked ~ .list .slider{
+    top: 240px;
+}
+  
+.content .text-content{
+    width: 80%;
+    height: 100%;
+}
+  
+.content .text{
+    display: none;
+}
+  
+.content .text .title{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+  
+.container .text p{
+    text-align: justify;
+}
+  
+.content .text-content .home{
+    display: block;
+}
+  
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about{
+    display: block;
+}
+  
+#blog:checked ~ .text-content .home,
+#help:checked ~ .text-content .home,
+#code:checked ~ .text-content .home,
+#about:checked ~ .text-content .home{
+    display: none;
+}
+  
+.content .list label:hover{
+    color: var(--vertical-menu);
+}
+/*Style CSS - Financeiro(fim)*/
+
+/*Style CSS - Bloco de Notas*/
+.note-block{
+    display: flex;
+    padding: 10px 10px;
+    width: 690px;
+    height: auto;
+    border: 1px solid #000;
+}
+
+.container-notes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 10px 10px 25px;
+}
+
+.addNote-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    border: 1px dashed var(--addnote-color);
+    height: 150px;
+    cursor: pointer;
+}
+
+/*Personalização do icone de adicinar*/
+.icon-plus{
+    padding: 0 14px;
+    border: 1px solid;
+    width: fit-content;
+    border-radius: 50%;
+    font-size: xx-large;
+}
+
+.content-notes{
+    display: contents;
+}
+
+/*Definição do bloco de notas, tamanho e estilo*/
+textarea{
+    padding: 5px;
+    padding-top: 14px;
+    outline: none;
+    resize: none;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: var(--scrollbar-color);
+}
+
+.item{
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+
+/*Icone de remoção ou exclusão do item inserido*/
+.remove{
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--removeclose-color);
+}
+
+.current-date{
+    position: absolute;
+    left: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--removeclose-color);
+}
+/*Style CSS - Bloco de Notas(fim)*/
