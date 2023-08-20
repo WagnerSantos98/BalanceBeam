@@ -403,3 +403,109 @@ textarea::-webkit-scrollbar-thumb{
     color: var(--removeclose-color);
 }
 /*Style CSS - Bloco de Notas(fim)*/
+
+/*Style CSS - To-Do List*/
+ul{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+
+.header button{
+    position: absolute;
+    right: 20.5%;
+    margin-top: -30px;
+}
+
+.header i{
+    font-size: 22px;
+}
+
+hr{
+    width: 167%;
+}
+
+.to-do{
+    margin-top: 40px;
+    width: 60%;
+}
+
+.textInsert{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    width: 85%;
+}
+
+.divInsert{
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    width: 655px;
+    display: flex;
+    box-shadow: 6px 5px 10px 0px gray;
+}
+
+button{
+    width: 10%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+i.bx-plus{
+   
+}
+
+.bx-plus{
+    font-size: 30px;
+    margin-left: 10px;
+    background-color: var(--total-color);
+    border-radius: 50%;
+    padding: 5px;
+    color: #fff;
+}
+
+.divLi{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 6px 5px 10px 0px gray;
+    display: flex;
+    align-items: center;
+}
+
+.divLi span{
+    width: 10%;
+    outline: none;
+    accent-color: currentcolor;
+}
+
+.divLi i{
+    font-size: 22px;
+    color: var(--expenses-color);
+}
+
+li{
+    list-style-type: none;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+@media(max-width: 775px){
+    input{
+        width: 70%;
+    }
+    .divInsert button{
+        width: 30%;
+    }
+    i{
+        font-size: 30px;
+        padding: 0px;
+    }
+}
