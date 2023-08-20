@@ -405,107 +405,109 @@ textarea::-webkit-scrollbar-thumb{
 /*Style CSS - Bloco de Notas(fim)*/
 
 /*Style CSS - To-Do List*/
-ul{
+ul {
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 20px;
-}
-
-.header button{
+  }
+  
+  .header button {
     position: absolute;
-    right: 20.5%;
+    right: 18%;
     margin-top: -30px;
-}
-
-.header i{
+  } 
+  
+  .header i {
     font-size: 22px;
-}
-
-hr{
-    width: 167%;
-}
-
-.to-do{
+  } 
+  
+  .to-do {
     margin-top: 40px;
     width: 60%;
-}
-
-.textInsert{
+  }
+  
+  .textInsert {
     border: none;
     padding: 10px;
     border-radius: 10px;
     outline: none;
-    width: 85%;
-}
-
-.divInsert{
+    width: 90%;
+  }
+  
+  .divInsert {
     padding: 10px;
-    background-color: var(--primary-color);
+    background-color: lightgray;
     border-radius: 10px;
-    width: 655px;
     display: flex;
-    box-shadow: 6px 5px 10px 0px gray;
-}
-
-button{
+    box-shadow: 6px 5px 10px 0px grey;
+  }
+  
+  button {
     width: 10%;
     background: transparent;
     border: none;
     cursor: pointer;
     outline: none;
-}
-
-i.bx-plus{
-   
-}
-
-.bx-plus{
+  }
+  
+  .bx-plus {
     font-size: 30px;
     margin-left: 10px;
-    background-color: var(--total-color);
+    background-color: rgb(139, 14, 223);
     border-radius: 50%;
     padding: 5px;
-    color: #fff;
-}
-
-.divLi{
+    color: white;
+  }
+  
+  .divLi {
     margin-top: 20px;
     padding: 10px;
-    background-color: var(--primary-color);
+    background: lightgray;
     border-radius: 10px;
-    box-shadow: 6px 5px 10px 0px gray;
+    box-shadow: 6px 5px 10px 0px grey;
     display: flex;
     align-items: center;
-}
-
-.divLi span{
+  }
+  
+  .divLi span {
+    width: 80%;
+    color: dimgray;
+  }
+  
+  .divLi input {
     width: 10%;
     outline: none;
     accent-color: currentcolor;
-}
-
-.divLi i{
+  }
+  
+  .divLi i {
     font-size: 22px;
-    color: var(--expenses-color);
-}
-
-li{
+    color: brown;
+  }
+  
+  li {
     list-style-type: none;
-}
-
-.line-through{
+  }
+  
+  .line-through {
     text-decoration: line-through;
-}
-
-@media(max-width: 775px){
-    input{
-        width: 70%;
+  }
+  
+  @media (max-width: 775px) {
+    input {
+      width: 70%;
     }
-    .divInsert button{
-        width: 30%;
+  
+    .divInsert button {
+      width: 30%;
     }
-    i{
-        font-size: 30px;
-        padding: 0px;
+  
+    i {
+      font-size: 30px;
+      padding: 0px;
     }
-}
+  
+    p {
+      font-size: x-large;
+    }
+  }
