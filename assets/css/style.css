@@ -20,6 +20,8 @@
     --scrollbar-color: #4b4453;
     --removeclose-color: #000;
 
+
+    --restart-color: #ff784e;
 }
 
 *{
@@ -404,4 +406,40 @@ textarea::-webkit-scrollbar-thumb{
 }
 /*Style CSS - Bloco de Notas(fim)*/
 
-/*Style CSS - To-Do List*/
+/*Style CSS - Quiz*/
+.content-quiz{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.spnQtd{
+    text-align: end;
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+button{
+    width: 100%;
+    text-align: start;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--restart-color);
+    color: #fff;
+}
+
+/*.finish{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.finish button{
+    text-align: center;
+}
