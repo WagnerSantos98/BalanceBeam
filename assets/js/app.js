@@ -190,3 +190,27 @@ function getCurrentDate(){
 
 loadItems();
 
+/*Script para o Quiz*/
+const question = document.querySelector(".question");
+const answers = document.querySelector(".answers");
+const spnQtd = document.querySelector(".spnQtd");
+const textFinish = document.querySelector(".finish span");
+const content_quiz = document.querySelector(".content-quiz");
+const contentFinish = document.querySelector(".finish");
+const btnRestart = document.querySelector(".finish button");
+
+import question from "./quiz.js";
+
+let currentIndex = 0;
+let questionsCorrect = 0;
+
+//Botão de reiniciar as questões
+btnRestart.onclick = () => {
+  content_quiz.style.display = "flex";
+  contentFinish.style.display = "none";
+
+  currentIndex = 0;
+  questionsCorrect = 0;
+  loadQuestion();
+};
+
