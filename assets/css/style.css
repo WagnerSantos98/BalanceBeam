@@ -413,33 +413,44 @@ textarea::-webkit-scrollbar-thumb{
     width: 100%;
     gap: 10px;
 }
-
-.spnQtd{
+  
+.spnQtd {
     text-align: end;
 }
-
-.answers{
+  
+.answers {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-
-button{
+  
+button.restart{
     width: 100%;
     text-align: start;
     padding: 5px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     background-color: var(--restart-color);
-    color: #fff;
+    color: white;
 }
-
-/*.finish{
+  
+button.answer{
+    width: 100%;
+    text-align: start;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--vertical-menu);
+    color: white;
+}
+.finish {
     display: none;
     flex-direction: column;
     gap: 10px;
 }
-
-.finish button{
+  
+.finish button {
     text-align: center;
 }
